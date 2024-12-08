@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slideshow</title>
+    <style>
+       
+       .container {
+        position: relative;
+            width: fit-content;
+            height: 400px;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            margin: 20px auto;
+           
+        }
+       .slide {
+           height: 400px;
+           width: 600px;
+           object-fit: cover;
+           border-radius: 10px;
+    
+
+        }
+        .action {
+            position: absolute;
+            transition: 0.5s;
+            cursor: pointer;
+            height: 70px;
+        }
+        .icon-prev {
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .icon-prev:hover{
+            translate:x(-10%); 
+            transform: scale(0.8);
+        }
+        .icon-next {
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+         .icon-next:hover {
+            translate: x(10%);
+            transform: scale(0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="./Img/1.jpg"   class="slide" id="slide"/>
+        <img src="./Img/prev.png" class="icon-prev action" onclick="prev()" />
+        <img src="./Img/next.png" class="icon-next action" onclick="next()"/>
+    </div>
+   
+
+</body>
+</html>
